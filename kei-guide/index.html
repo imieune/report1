@@ -38,6 +38,14 @@ ul{margin:0 0 12px;padding-left:1.3em}li{margin:5px 0}
 .say li{margin:8px 0}
 blockquote{margin:6px 0 12px;padding:16px 20px;background:var(--soft);border-radius:10px}
 .note{font-size:14px;color:var(--quiet)}
+.split-sec{width:min(1180px,calc(100vw - 32px));margin-left:50%;transform:translateX(-50%)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:8px}
+.pane{border:1px solid var(--line);border-radius:14px;padding:18px 18px 10px;background:var(--bg)}
+.pane h3{font-size:19px;margin:0 0 10px}
+.route{list-style:none;padding:0;margin:0 0 6px}.route li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15px;margin:0}
+.route b{font-weight:700;color:var(--quiet);font-size:14px}
+.pane .fig{border:0;padding:6px 0 0}
+@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr)}.split-sec{width:auto;margin-left:0;transform:none}}
 footer{padding:36px 0 52px;color:var(--quiet);font-size:14px}
 svg text{font-family:inherit}
 .s-edge{stroke:var(--edge)}.s-acc{stroke:var(--acc)}.f-acc{fill:var(--accbg)}.f-ink{fill:var(--ink)}.f-quiet{fill:var(--quiet)}.f-edge{fill:var(--edge)}
@@ -82,18 +90,19 @@ svg text{font-family:inherit}
 </div>
 </section>
 
-<section>
+<section class="split-sec">
 <h2>3. 이벤트 진입 방법</h2>
-<h3 style="font-size:18px;margin:18px 0 8px">유튜브에서 방송할 때</h3>
-<table>
-<thead><tr><th>경로</th><th>방법</th></tr></thead>
-<tbody>
-<tr><td class="k">① 설명란</td><td>첫 줄에 이벤트 링크 (PC·모바일 클릭 가능)</td></tr>
-<tr><td class="k">② 고정댓글·채팅 공지</td><td>이벤트 링크 고정 (모바일은 댓글을 펼쳐야 보임)</td></tr>
-<tr><td class="k">③ QR</td><td>방송 화면 모서리에 상시 노출 (PC 시청자가 휴대폰으로 촬영)</td></tr>
-<tr><td class="k">④ 포털 검색</td><td>검색 → 상단 광고·포스팅으로 진입 (검색어는 오픈 전 안내)</td></tr>
-<tr><td class="k">⑤ 커뮤니티 게시물</td><td>채널 커뮤니티(게시물)에 이벤트 공지 + 링크 업로드 (방송 전에 미리 알림)</td></tr>
-</tbody></table>
+<p>왼쪽은 유튜브, 오른쪽은 숲에서 방송할 때예요. 방송하는 플랫폼 쪽만 보시면 됩니다.</p>
+<div class="split">
+<div class="pane">
+<h3>유튜브에서 방송할 때</h3>
+<ul class="route">
+<li><b>링크 고정</b>설명란 첫 줄, 고정댓글·채팅 공지</li>
+<li><b>모바일 시청자</b>설명란·고정댓글 링크 터치 (댓글은 펼쳐야 보임)</li>
+<li><b>PC 시청자</b>링크 클릭 또는 화면 QR 촬영</li>
+<li><b>방송 전 공지</b>커뮤니티 게시물에 공지 + 링크</li>
+<li><b>포털 검색</b>검색 → 상단 광고·포스팅 (검색어는 오픈 전 안내)</li>
+</ul>
 <div class="fig">
 <svg viewBox="0 0 760 476" role="img" aria-label="유튜브 방송 화면 예시" font-size="13">
 <text x="24" y="32" font-size="15" font-weight="700" class="f-ink">유튜브 방송은 설명란·고정댓글·채팅 공지 링크와 QR로 진입</text>
@@ -119,16 +128,16 @@ svg text{font-family:inherit}
 <text x="24" y="456" font-size="12" class="f-quiet">PC 시청자는 ③ QR을 휴대폰으로 찍거나 ①② 링크 클릭, 모바일 시청자는 ①② 링크 터치</text>
 </svg>
 </div>
-<h3 style="font-size:18px;margin:26px 0 8px">숲(SOOP)에서 방송할 때</h3>
-<table>
-<thead><tr><th>경로</th><th>방법</th></tr></thead>
-<tbody>
-<tr><td class="k">① 스트리머 공지</td><td>채팅창 공지에 이벤트 링크·주소 게시</td></tr>
-<tr><td class="k">② 짧은 주소</td><td>방송 화면에 크게 띄워 직접 입력하게 안내 (모바일 시청자용: QR을 못 찍고 숲 채팅 링크도 잘 안 눌림)</td></tr>
-<tr><td class="k">③ QR</td><td>방송 화면 모서리에 상시 노출 (PC 시청자가 휴대폰으로 촬영)</td></tr>
-<tr><td class="k">④ 포털 검색</td><td>검색 → 상단 광고·포스팅으로 진입, 방송 중 멘트로 안내</td></tr>
-<tr><td class="k">⑤ 채널 게시판</td><td>숲 채널 게시판에 이벤트 공지글 + 링크 업로드 (방송 전에 미리 알림)</td></tr>
-</tbody></table>
+</div>
+<div class="pane">
+<h3>숲(SOOP)에서 방송할 때</h3>
+<ul class="route">
+<li><b>링크 고정</b>스트리머 공지</li>
+<li><b>모바일 시청자</b>화면에 띄운 <strong>짧은 주소</strong> 직접 입력</li>
+<li><b>PC 시청자</b>화면 <strong>QR</strong> 촬영</li>
+<li><b>방송 전 공지</b>채널 게시판에 공지글 + 링크</li>
+<li><b>포털 검색</b>유튜브와 동일, 방송 중 멘트로 안내</li>
+</ul>
 <div class="fig">
 <svg viewBox="0 0 760 488" role="img" aria-label="숲 방송 화면 예시" font-size="13">
 <text x="24" y="32" font-size="15" font-weight="700" class="f-ink">숲 방송은 스트리머 공지, 짧은 주소, QR로 진입</text>
@@ -153,6 +162,8 @@ svg text{font-family:inherit}
 <text x="24" y="452" font-size="12" class="f-quiet">PC 시청자는 ③ QR 촬영, 모바일 시청자는 ① 공지 링크 또는 ② 짧은 주소 입력</text>
 <text x="24" y="472" font-size="12" class="f-quiet">④ 포털 검색은 방송 중 멘트로 안내</text>
 </svg>
+</div>
+</div>
 </div>
 <p class="note">링크·QR은 오픈 전에 전달드립니다.</p>
 </section>
