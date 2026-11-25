@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>팔로우 웰컴매니아 × 케이 방송 가이드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: 협업 브리프. 차분하고 실무적, 결론 먼저
+   IDEA: 방송 전에 한 번 훑어보는 캠페인 브리프 한 장
+   PICTURE: 참여 흐름도, 혜택 카드, 방송 화면 노출 위치 그림
+   COLOUR and TYPE: 흰 바탕, 진한 잉크, 파란 강조 한 가지 / Noto Sans KR
+   LAYOUT: 한 칼럼 문서, 상단 핵심 문구 띠, 섹션 링크 한 줄 */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#121417);--ink:light-dark(#1b1d21,#eceef1);--quiet:light-dark(#62666d,#a3a8b0);
+--line:light-dark(#e3e5e8,#2c3036);--soft:light-dark(#f5f6f8,#1a1d21);
+--acc:light-dark(#2563d9,#6c9cf5);--accbg:light-dark(#eaf1fd,#1b2a44);--edge:light-dark(#b6b9bf,#565b63)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;overflow-x:clip}
+html{scroll-padding-top:72px}
+.wrap{max-width:860px;margin:0 auto;padding:0 max(4vw,16px)}
+header.top{padding:clamp(32px,5vw,64px) 0 24px}
+h1{font-size:clamp(28px,4.4vw,42px);line-height:1.15;font-weight:800;margin:0 0 10px;text-wrap:balance}
+.by{color:var(--quiet);font-size:14px;margin:0 0 22px}
+.lead{margin:0 0 18px}
+.key{background:var(--accbg);border-left:4px solid var(--acc);border-radius:10px;padding:18px 22px;font-size:clamp(18px,2.4vw,22px);font-weight:700;line-height:1.45}
+nav.scroll{display:flex;gap:8px;overflow-x:auto;padding:14px 0;border-bottom:1px solid var(--line);background:var(--bg)}
+nav.scroll a{flex:none;font-size:14px;color:var(--quiet);text-decoration:none;padding:6px 12px;border:1px solid var(--line);border-radius:999px}
+nav.scroll a:hover,nav.scroll a:focus-visible{color:var(--acc);border-color:var(--acc);outline:none}
+@media(min-width:900px){nav.scroll{position:sticky;top:0;z-index:5}}
+section{padding:36px 0 8px}
+h2{font-size:24px;line-height:1.3;margin:0 0 14px;font-weight:800}
+h3{font-size:18px;margin:26px 0 10px;font-weight:700}
+p{margin:0 0 12px}
+strong{font-weight:700}
+.fig{margin:18px 0 8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg)}
+.fig svg{display:block;width:100%;height:auto}
+.cap{font-size:13px;color:var(--quiet);margin:6px 2px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0 14px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);font-weight:700;font-size:14px;white-space:nowrap}
+td.hl,th.hl{background:var(--accbg)}
+td.k{white-space:nowrap;font-weight:500;width:9em}
+ul,ol{margin:0 0 14px;padding-left:1.3em}li{margin:4px 0}
+blockquote{margin:10px 0 18px;padding:16px 20px;background:var(--soft);border-radius:10px;font-size:15.5px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 28px;padding:16px 20px;border:1px solid var(--line);border-radius:10px}
+.contact b{display:block;font-size:13px;color:var(--quiet);font-weight:500}
+footer{padding:40px 0 56px;color:var(--quiet);font-size:13px}
+svg text{font-family:inherit}
+.s-edge{stroke:var(--edge)}.s-acc{stroke:var(--acc)}.f-acc{fill:var(--accbg)}.f-ink{fill:var(--ink)}.f-quiet{fill:var(--quiet)}.f-soft{fill:var(--soft)}.f-line{fill:var(--line)}.f-edge{fill:var(--edge)}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--quiet)}.stack td:empty{display:none}td.k{width:auto}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<h1>팔로우 웰컴매니아 × 케이 방송 가이드</h1>
+<p class="by">2026-11-25 · 아이엠아이 마케팅팀 강은혜</p>
+<p class="lead">케이님, 아이템매니아 '팔로우 웰컴매니아' 이벤트 방송 가이드입니다. 방송에서는 아래 핵심 문구를 중심으로 안내해 주세요.</p>
+<div class="key">"신규 가입하고 '케이' 팔로우하면 메가MGC커피 아메리카노 쿠폰!"</div>
+</header>
+</div>
+<div class="wrap"><nav class="scroll" aria-label="섹션 바로가기">
+<a href="#overview">캠페인 개요</a><a href="#flow">참여 흐름</a><a href="#schedule">진행 일정</a><a href="#rules">혜택별 규칙</a><a href="#placement">노출 위치</a><a href="#script">멘트 가이드</a><a href="#assets">제공 소재</a><a href="#report">검수·보고</a><a href="#faq">FAQ</a><a href="#contact">연락처</a>
+</nav></div>
+<main class="wrap">
+
+<section id="overview">
+<h2>1. 캠페인 개요</h2>
+<table class="stack">
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td class="k">이벤트명</td><td>팔로우 웰컴매니아</td></tr>
+<tr><td class="k">이벤트 주소</td><td>오픈 전 새 주소로 별도 안내 (QR·단축 URL과 함께 전달)</td></tr>
+<tr><td class="k">기간</td><td>11/25(수)~26(목) 중 오픈 예정, 확정 시 바로 안내</td></tr>
+<tr><td class="k hl">참여 대상</td><td class="hl"><strong>아이템매니아 신규 가입 AND 케이 팔로우</strong> 회원 (두 조건 모두 충족 시, 가입만 했을 때는 대상 아님)</td></tr>
+<tr><td class="k">참여 연령</td><td>만 19세 이상</td></tr>
+</tbody></table>
+
+<div class="fig">
+<svg viewBox="0 0 760 264" role="img" aria-label="커피 쿠폰만 케이 전용, 나머지 두 혜택은 공통입니다" font-size="12.5">
+<text x="24" y="32" font-size="15" font-weight="700" class="f-ink">커피 쿠폰만 케이 전용, 나머지 두 혜택은 공통입니다</text>
+<g><rect x="24" y="56" width="224" height="184" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><line x1="40" y1="118" x2="232" y2="118" class="s-edge" stroke-opacity=".4"/>
+<text x="40" y="80" font-size="11.5" font-weight="700" class="f-quiet">공통</text>
+<text x="40" y="104" font-size="15" font-weight="700" class="f-ink">거래 지원 팩</text>
+<text x="40" y="140" class="f-ink">할인쿠폰 3장 (1천·3천·5천원)</text>
+<text x="40" y="160" class="f-ink">프리미엄 5시간</text>
+<text x="40" y="180" class="f-ink">물품강조 60시간</text>
+<text x="40" y="220" font-size="11.5" class="f-quiet">최초 팔로우 시 1회 즉시 지급</text></g>
+<g><rect x="268" y="56" width="224" height="184" rx="8" class="f-acc s-acc" stroke-width="2"/><line x1="284" y1="118" x2="476" y2="118" class="s-acc" stroke-opacity=".3"/>
+<text x="284" y="80" font-size="11.5" font-weight="700" class="f-ink">케이 전용</text>
+<text x="284" y="104" font-size="15" font-weight="700" class="f-ink">메가MGC커피 아메리카노</text>
+<text x="284" y="140" class="f-ink">신규 가입 + 케이 팔로우</text>
+<text x="284" y="160" class="f-ink">당일·전일 가입자만</text>
+<text x="284" y="180" class="f-ink">계정당 1회 · 수량 한정</text>
+<text x="284" y="220" font-size="11.5" class="f-ink">유효기간 2026.12.25까지</text></g>
+<g><rect x="512" y="56" width="224" height="184" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><line x1="528" y1="118" x2="720" y2="118" class="s-edge" stroke-opacity=".4"/>
+<text x="528" y="80" font-size="11.5" font-weight="700" class="f-quiet">공통</text>
+<text x="528" y="104" font-size="15" font-weight="700" class="f-ink">템코인 교환소</text>
+<text x="528" y="140" class="f-ink">무료이용권 · 코인 3개 교환</text>
+<text x="528" y="160" class="f-ink">할인쿠폰 · 코인 5개 교환</text>
+<text x="528" y="180" class="f-ink">마일리지 1만원 · 20개 응모</text>
+<text x="528" y="200" class="f-ink">유튜브 프리미엄 · 30개 응모</text>
+<text x="528" y="220" font-size="11.5" class="f-quiet">3만원 이상 거래: 판매 1·구매 2개</text></g>
+</svg>
+<p class="cap">시청자 혜택 3가지 · 공통 2, 케이 전용 1</p>
+</div>
+</section>
+
+<section id="flow">
+<h2>2. 시청자 참여 흐름</h2>
+<div class="fig">
+<svg viewBox="0 0 760 308" role="img" aria-label="가입하고 케이를 팔로우하면 혜택 3가지가 열립니다" font-size="13">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="f-edge"/></marker></defs>
+<text x="24" y="32" font-size="15" font-weight="700" class="f-ink">가입하고 케이를 팔로우하면 혜택 3가지가 열립니다</text>
+<g fill="none" class="s-edge" stroke-width="1.25">
+<path d="M236 96H274" marker-end="url(#ar)"/><path d="M486 96H524" marker-end="url(#ar)"/>
+<path d="M630 124V160H130"/><path d="M130 160V196" marker-end="url(#ar)"/><path d="M380 160V196" marker-end="url(#ar)"/><path d="M630 160V196" marker-end="url(#ar)"/></g>
+<g><rect x="24" y="68" width="212" height="56" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><text x="130" y="92" text-anchor="middle" font-weight="700" class="f-ink">① 이벤트 페이지 접속</text><text x="130" y="110" text-anchor="middle" font-size="11.5" class="f-quiet">방송 QR · 채팅 공지 링크</text></g>
+<g><rect x="274" y="68" width="212" height="56" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><text x="380" y="92" text-anchor="middle" font-weight="700" class="f-ink">② 회원가입</text><text x="380" y="110" text-anchor="middle" font-size="11.5" class="f-quiet">로그인 안내 → 신규 가입</text></g>
+<g><rect x="524" y="68" width="212" height="56" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><text x="630" y="92" text-anchor="middle" font-weight="700" class="f-ink">③ '케이' 선택 → 팔로우</text><text x="630" y="110" text-anchor="middle" font-size="11.5" class="f-quiet">유튜버 목록에서 케이 선택</text></g>
+<g><rect x="24" y="196" width="212" height="56" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><text x="130" y="220" text-anchor="middle" font-weight="700" class="f-ink">거래 지원 팩</text><text x="130" y="238" text-anchor="middle" font-size="11.5" class="f-quiet">공통 · 팔로우 즉시 지급</text></g>
+<g><rect x="274" y="196" width="212" height="56" rx="8" class="f-acc s-acc" stroke-width="2"/><text x="380" y="220" text-anchor="middle" font-weight="700" class="f-ink">메가MGC커피 아메리카노</text><text x="380" y="238" text-anchor="middle" font-size="11.5" class="f-ink">케이 전용 · [커피 쿠폰받기]</text></g>
+<g><rect x="524" y="196" width="212" height="56" rx="8" fill="none" class="s-edge" stroke-width="1.25"/><text x="630" y="220" text-anchor="middle" font-weight="700" class="f-ink">템코인 적립</text><text x="630" y="238" text-anchor="middle" font-size="11.5" class="f-quiet">공통 · 3만원 이상 거래 시</text></g>
+<text x="388" y="182" font-size="11.5" class="f-quiet">당일·전일 가입자만</text>
+<text x="380" y="288" text-anchor="middle" font-size="11.5" class="f-quiet">커피 쿠폰은 신규 가입(당일·전일) + 케이 팔로우를 모두 충족해야 받을 수 있어요 · 수량 한정</text>
+</svg>
+<p class="cap">시청자 참여 흐름 · 3단계, 혜택 3가지</p>
+</div>
+</section>
+
+<section id="schedule">
+<h2>3. 진행 일정</h2>
+<table class="stack">
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td class="k">방송·영상 횟수</td><td>(협의 후 기입)</td></tr>
+<tr><td class="k">첫 방송·업로드일</td><td>(협의 후 기입)</td></tr>
+<tr><td class="k">QR·링크 노출</td><td>방송 시작부터 종료까지 상시</td></tr>
+<tr><td class="k">이벤트 안내 멘트</td><td>방송 중 주기적으로 (횟수는 협의 후 기입)</td></tr>
+</tbody></table>
+</section>
+
+<section id="rules">
+<h2>4. 혜택별 세부 규칙</h2>
+<h3>EVENT 01. 유튜버 팔로우 → 거래 지원 팩</h3>
+<p>이벤트 페이지 유튜버 목록에서 '케이'를 선택하고 [팔로우]만 누르면 바로 지급됩니다. <strong>ID당 최초 1회 지급</strong>입니다.</p>
+<table class="stack">
+<thead><tr><th>혜택</th><th>내용</th><th>사용 제한 금액</th><th>유효기간</th></tr></thead>
+<tbody>
+<tr><td>할인쿠폰</td><td>1,000원</td><td>3만원 이상 거래</td><td>발급일부터 7일</td></tr>
+<tr><td>할인쿠폰</td><td>3,000원</td><td>7만원 이상 거래</td><td>발급일부터 7일</td></tr>
+<tr><td>할인쿠폰</td><td>5,000원</td><td>11만원 이상 거래</td><td>발급일부터 7일</td></tr>
+<tr><td>무료이용권</td><td>프리미엄 5시간</td><td>-</td><td>발급일부터 익월 말일</td></tr>
+<tr><td>무료이용권</td><td>물품강조 60시간</td><td>-</td><td>발급일부터 익월 말일</td></tr>
+</tbody></table>
+<ul>
+<li>유튜버는 1일 1회 변경 가능</li>
+<li>거래 실적은 <strong>거래 완료 시점에 선택된 유튜버</strong>에게 합산 (중간에 다른 유튜버로 바꾸면 이후 거래는 케이님께 잡히지 않음)</li>
+<li>페이지에 유튜버 20명(좌·우 각 10명)이 노출되며, 케이님 프로필은 강조 표시</li>
+</ul>
+
+<h3>EVENT 02. 케이 팔로우 전용 → 메가MGC커피 아메리카노</h3>
+<table class="stack">
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td class="k hl">받는 조건</td><td class="hl"><strong>① 당일 또는 전일 신규 가입 AND ② 케이 팔로우</strong> (하나만 충족 시 지급 불가)</td></tr>
+<tr><td class="k">받는 방법</td><td>[커피 쿠폰받기] 클릭 → 쿠폰 PIN번호 팝업</td></tr>
+<tr><td class="k">지급</td><td>계정당 1회</td></tr>
+<tr><td class="k">유효기간</td><td><strong>2026년 12월 25일까지</strong></td></tr>
+<tr><td class="k">다시 확인</td><td>[쿠폰번호 다시 보기] 버튼</td></tr>
+<tr><td class="k">수량</td><td><strong>준비 수량 5,000개</strong> (소진 시 "준비된 커피 쿠폰이 모두 소진되었습니다." 안내)</td></tr>
+</tbody></table>
+
+<h3>EVENT 03. 템코인 교환소</h3>
+<p>유튜버를 선택한 상태에서 <strong>3만원 이상 거래 완료 시 판매 1개, 구매 2개</strong>가 쌓입니다.</p>
+<table class="stack">
+<thead><tr><th>혜택</th><th>내용</th><th>사용 제한 금액</th><th>유효기간</th><th>필요 템코인·횟수</th></tr></thead>
+<tbody>
+<tr><td>할인쿠폰</td><td>1,000원</td><td>3만원 이상 거래</td><td>발급일부터 7일</td><td>5개 교환, 월 최대 10회</td></tr>
+<tr><td>할인쿠폰</td><td>3,000원</td><td>7만원 이상 거래</td><td>발급일부터 7일</td><td>5개 교환, 월 최대 10회</td></tr>
+<tr><td>할인쿠폰</td><td>5,000원</td><td>11만원 이상 거래</td><td>발급일부터 7일</td><td>5개 교환, 월 최대 10회</td></tr>
+<tr><td>무료이용권</td><td>프리미엄 5시간</td><td>-</td><td>발급일부터 익월 말일</td><td>3개 교환, 횟수 제한 없음</td></tr>
+<tr><td>무료이용권</td><td>물품강조 60시간</td><td>-</td><td>발급일부터 익월 말일</td><td>3개 교환, 횟수 제한 없음</td></tr>
+<tr><td>마일리지</td><td>10,000원</td><td>-</td><td>발급일부터 7일</td><td>20개 응모, 응모 제한 없음, <strong>당첨 월 최대 5회</strong></td></tr>
+<tr><td>유튜브 프리미엄</td><td>1년</td><td>-</td><td>-</td><td>30개 응모, 응모 제한 없음</td></tr>
+</tbody></table>
+<p>유튜브 프리미엄 당첨자는 익월에 개별 연락드리며, 제세공과금을 제외한 후 <strong>출금 가능 마일리지로 대체 지급</strong>합니다 (14,900원 × 12개월).</p>
+<ul>
+<li>판매자·구매자 모두 유튜버를 선택한 거래는 <strong>구매자에게만</strong> 템코인 지급</li>
+<li>이벤트로 받은 상품 총액이 <strong>5만원을 넘으면 제세공과금 22%</strong> 부과</li>
+<li>어뷰징(부정거래)이 확인되면 거래금액 집계 취소</li>
+<li>재고 소진이나 당사 사정에 따라 사전 공지 없이 조기 종료·상품 변경 가능</li>
+</ul>
+</section>
+
+<section id="placement">
+<h2>5. 방송 노출 위치 (PC·모바일)</h2>
+<p>PC와 모바일 시청자가 모두 바로 들어올 수 있도록 <strong>QR코드와 링크를 방송 내내 고정</strong>해 주세요. QR과 링크는 모두 이벤트 페이지로 연결되며, 페이지 유튜버 목록에 케이님이 강조 노출됩니다.</p>
+<div class="fig">
+<svg viewBox="0 0 760 476" role="img" aria-label="QR은 화면 모서리에, 링크는 채팅 공지·설명란·고정댓글에 고정" font-size="13">
+<text x="24" y="32" font-size="15" font-weight="700" class="f-ink">QR은 화면 모서리에, 링크는 채팅 공지·설명란·고정댓글에 고정</text>
+<rect x="40" y="68" width="456" height="248" rx="8" class="f-soft s-edge" stroke-width="1.25"/>
+<text x="196" y="164" text-anchor="middle" class="f-quiet">게임 화면 (방송 영상)</text>
+<rect x="300" y="228" width="184" height="76" rx="8" class="f-acc s-acc" stroke-width="2"/>
+<rect x="312" y="240" width="50" height="50" fill="none" stroke="currentColor" class="s-edge" stroke-width="1.25"/>
+<g class="f-ink"><rect x="315" y="243" width="13" height="13"/><rect x="346" y="243" width="13" height="13"/><rect x="315" y="274" width="13" height="13"/><rect x="334" y="262" width="6" height="6"/><rect x="346" y="276" width="8" height="8"/></g>
+<text x="372" y="250" font-size="12" font-weight="700" class="f-ink">① QR 배너</text>
+<text x="372" y="267" font-size="11.5" class="f-ink">케이 팔로우하면</text>
+<text x="372" y="283" font-size="11.5" class="f-ink">커피 쿠폰!</text>
+<text x="372" y="298" font-size="10.5" class="f-quiet">+ 짧은 URL</text>
+<rect x="512" y="68" width="208" height="352" rx="8" fill="none" class="s-edge" stroke-width="1.25"/>
+<g class="f-line"><rect x="524" y="152" width="150" height="10" rx="5"/><rect x="524" y="176" width="120" height="10" rx="5"/><rect x="524" y="200" width="170" height="10" rx="5"/><rect x="524" y="224" width="100" height="10" rx="5"/><rect x="524" y="248" width="140" height="10" rx="5"/><rect x="524" y="272" width="160" height="10" rx="5"/><rect x="524" y="296" width="110" height="10" rx="5"/><rect x="524" y="320" width="150" height="10" rx="5"/><rect x="524" y="344" width="130" height="10" rx="5"/><rect x="524" y="368" width="170" height="10" rx="5"/></g>
+<text x="616" y="408" text-anchor="middle" font-size="11.5" class="f-quiet">채팅창</text>
+<rect x="524" y="80" width="184" height="56" rx="8" class="f-acc s-acc" stroke-width="2"/>
+<text x="536" y="102" font-weight="700" class="f-ink">② 채팅 고정 공지</text>
+<text x="536" y="122" font-size="11.5" class="f-ink">이벤트 링크 상시 게시</text>
+<rect x="40" y="332" width="456" height="40" rx="8" class="f-acc s-acc" stroke-width="2"/>
+<text x="56" y="357" class="f-ink">③ 설명란 첫 줄 · 이벤트 링크</text>
+<rect x="40" y="380" width="456" height="40" rx="8" class="f-acc s-acc" stroke-width="2"/>
+<text x="56" y="405" class="f-ink">④ 고정댓글 · 이벤트 링크</text>
+<text x="24" y="456" font-size="12" class="f-quiet">PC 시청자는 ②③ 링크 클릭, 모바일 시청자는 ① QR 촬영 또는 ②④ 링크 터치</text>
+</svg>
+<p class="cap">방송 화면 노출 위치 예시 · ①~④</p>
+</div>
+<p>노출할 때 아래 세 가지만 지켜 주세요.</p>
+<ul>
+<li>QR 배너는 게임 화면·채팅창·웹캠에 가려지지 않는 위치에 둬 주세요.</li>
+<li>모바일 화면에서도 찍힐 만큼 QR 크기를 충분히 키워 주세요.</li>
+<li>방송 전 PC 링크 클릭과 휴대폰 QR 촬영으로 진입을 한 번씩 확인해 주세요.</li>
+</ul>
+</section>
+
+<section id="script">
+<h2>6. 방송 멘트 가이드</h2>
+<h3>멘트 예시 (편하게 바꿔 주세요)</h3>
+<blockquote>"아이템매니아 처음 가입하시는 분들, 이벤트 페이지 들어가서 가입하고 저 '케이' 골라서 팔로우 눌러주세요. 할인쿠폰 3장이랑 프리미엄, 물품강조까지 들어 있는 거래 지원 팩 바로 드립니다. 그리고 저 팔로우한 신규 가입자분들은 메가MGC커피 아메리카노 쿠폰도 받을 수 있어요. 수량이 정해져 있고 가입 당일·다음 날까지만 받을 수 있으니 가입한 날 바로 받아 가세요. 만 19세 이상만 참여할 수 있고요, 화면 QR 찍거나 채팅 공지·고정댓글 링크로 들어오세요."</blockquote>
+<h3>꼭 해 주세요</h3>
+<ul>
+<li><strong>신규 가입 + 케이 팔로우를 모두 해야 대상</strong>이라는 점 안내</li>
+<li>만 19세 이상만 참여 가능하다는 점 안내</li>
+<li>유튜버 목록에서 <strong>'케이' 선택</strong>을 강조</li>
+<li>커피 쿠폰 조건을 함께 안내: <strong>가입 당일·다음 날까지</strong>, <strong>준비 수량 5,000개 한정</strong></li>
+<li>QR·링크는 <strong>방송 내내 고정</strong></li>
+<li><strong>유료 광고 표기</strong>: '유료 프로모션 포함' 체크 + 설명란 문구</li>
+</ul>
+</section>
+
+<section id="assets">
+<h2>7. 제공 소재</h2>
+<table class="stack">
+<thead><tr><th>소재</th><th>용도</th><th>전달 시점</th></tr></thead>
+<tbody>
+<tr><td>이벤트 QR코드 이미지</td><td>방송 화면 고정 배너</td><td>방송 전 전달</td></tr>
+<tr><td>이벤트 단축 URL</td><td>채팅 공지·설명란·고정댓글</td><td>방송 전 전달</td></tr>
+<tr><td>이벤트 배너 이미지</td><td>방송 화면·썸네일 활용 (선택)</td><td>방송 전 전달</td></tr>
+</tbody></table>
+</section>
+
+<section id="report">
+<h2>8. 검수·보고</h2>
+<ol>
+<li><strong>방송 전</strong>: QR 배너가 들어간 화면 캡처 1장 공유 → 위치·크기 확인</li>
+<li><strong>방송·업로드 후</strong>: 다시보기·영상 링크 공유</li>
+<li><strong>요청 시</strong>: 조회수·동시 시청자 등 기본 지표 공유</li>
+</ol>
+</section>
+
+<section id="faq">
+<h2>9. 시청자 자주 묻는 질문</h2>
+<table class="stack">
+<thead><tr><th>질문</th><th>답변</th></tr></thead>
+<tbody>
+<tr><td>이미 가입한 지 오래됐는데 참여돼요?</td><td>신규 가입 + 케이 팔로우를 모두 해야 해요. 커피 쿠폰은 당일·전일 가입자만 받을 수 있어요.</td></tr>
+<tr><td>다른 유튜버를 골랐는데 케이로 바꿀 수 있어요?</td><td>1일 1회 변경 가능해요.</td></tr>
+<tr><td>커피 쿠폰 번호를 잊어버렸어요.</td><td>이벤트 페이지 [쿠폰번호 다시 보기]에서 확인하세요.</td></tr>
+<tr><td>커피 쿠폰 버튼을 눌렀는데 안 나와요.</td><td>준비된 수량이 모두 소진된 경우예요. 거래 지원 팩과 템코인은 그대로 받을 수 있어요.</td></tr>
+</tbody></table>
+</section>
+
+<section id="contact">
+<h2>10. 담당자 연락처</h2>
+<div class="contact">
+<div><b>담당</b>(주)아이엠아이 마케팅팀 강은혜 매니저</div>
+<div><b>연락처</b>010-6665-6446</div>
+</div>
+</section>
+
+</main>
+<div class="wrap"><footer>팔로우 웰컴매니아 × 케이 방송 가이드 · (주)아이엠아이</footer></div>
+</body>
+</html>
